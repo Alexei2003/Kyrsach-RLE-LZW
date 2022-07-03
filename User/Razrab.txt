@@ -1,0 +1,9 @@
+ RLE algorithm:
+The RLE algorithm is a series length encoding data compression algorithm that replaces repeated characters with one character and the number of its repetitions. For example, a string like "AAAAAAAABCCCC" can be converted to a record like "8?A, B, 4?C".
+LZW algorithm:
+This algorithm, when compressing data, dynamically creates a dictionary of phrases: groups of fixed-length bits are assigned to certain sequences of characters. The dictionary is initialized with all 1-character phrases.
+As the encoding proceeds, the algorithm scans the text character by character from left to right. When the algorithm reads the next character in this position, there is a string W of maximum length that matches some phrase from the dictionary.
+Then the code of this phrase is fed to the output, and the string WK, where K is the character following W in the input message, is entered into the dictionary as a new phrase and some code is assigned to it.
+The character K is used as the beginning of the next phrase.
+LZ77 algorithm:
+if a chain of elements occurs more than once in the input data, then all subsequent occurrences of it can be 
